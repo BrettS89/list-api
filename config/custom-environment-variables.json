@@ -1,0 +1,7 @@
+{
+  "jwtSecret": "JWT_SECRET",
+  "mongodb": "MONGO_URI",
+  "mongodbTest": "MONGO_URI_TEST",
+  "port": "PORT",
+  "environment": "NODE_ENV"
+}
