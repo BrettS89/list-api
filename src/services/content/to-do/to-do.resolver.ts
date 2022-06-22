@@ -48,7 +48,7 @@ const resolvers = {
               todoId: resource._id,
               userId: params.user?._id
             }
-        })
+          })
       ).data[0]);
     },
 
