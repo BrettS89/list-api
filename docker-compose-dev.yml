@@ -9,7 +9,6 @@ services:
     container_name: "wedo-api"
     depends_on:
       - mongodb
-      - redis
     env_file:
       - ./.env
     ports:
