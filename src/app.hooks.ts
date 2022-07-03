@@ -1,7 +1,6 @@
 // Application hooks that run for every service
 // Don't remove this comment. It's needed to format import lines nicely.
 
-//@ts-ignore
 import search from 'feathers-mongodb-fuzzy-search';
 import { resolve } from './hooks';
 import { HookContext } from '@feathersjs/feathers';

@@ -1,5 +1,7 @@
 import { Hook } from '@feathersjs/feathers';
 
+/*eslint-disable */
+
 export const updateQueryForFriendsTodos: Hook = async (context) => {
   let { app, params: { query, user } } = context;
 
@@ -23,3 +25,5 @@ export const updateQueryForFriendsTodos: Hook = async (context) => {
 
   return context;
 };
+
+/*eslint-enable */

@@ -1,3 +1,5 @@
+/*eslint-disable */
+
 import mongoose from 'mongoose';
 import { Application } from './declarations';
 import logger from './logger';
@@ -10,8 +12,7 @@ export default function (app: Application) {
     const { MongoMemoryServer } = require('mongodb-memory-server');
 
     MongoMemoryServer.create()
-      // @ts-ignore
-      .then((mongod: MongoMemoryServer) => {
+      .then((mongod: typeof MongoMemoryServer) => {
         const uri = mongod.getUri();
         app.set('mongodbMemoryServer', mongod);
         return mongoose.connect(uri);
@@ -29,3 +30,5 @@ export default function (app: Application) {
 
   app.set('mongooseClient', mongoose);
 }
+
+/*eslint-enable */
