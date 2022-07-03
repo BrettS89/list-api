@@ -17,7 +17,7 @@ export default function (app: Application): Model<any> {
       },
       size: {
         type: Number,
-        required: true,
+        required: false,
       },
       type: {
         type: String,
