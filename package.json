@@ -29,7 +29,11 @@
     "dev": "ts-node-dev --no-notify src/",
     "start": "npm run compile && node lib/",
     "jest": "jest",
-    "compile": "shx rm -rf lib/ && tsc"
+    "compile": "shx rm -rf lib/ && tsc",
+    "docker-dev": "docker-compose -f docker-compose-dev.yml up",
+    "docker-dev-build": "docker-compose -f docker-compose-dev.yml up --build",
+    "docker-dev-down": "docker-compose -f docker-compose-dev.yml down",
+    "docker-dev-down-drop": "docker-compose -f docker-compose-dev.yml down -v"
   },
   "standard": {
     "env": [
@@ -50,6 +54,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "feathers-hooks-common": "^6.1.1",
+    "feathers-mongodb-fuzzy-search": "^2.0.1",
     "feathers-mongoose": "^8.5.1",
     "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
