@@ -12,7 +12,7 @@ export default function (app: Application): Model<any> {
   const schema = new Schema({
     todoId: {
       type: Schema.Types.ObjectId,
-      ref: 'content/to-do',
+      ref: 'content/to-dos',
       index: true,
     },
     userId: {
