@@ -35,8 +35,11 @@ export default function (app: Application): Model<any> {
       },
     }
   }, {
-    timestamps: true
+    timestamps: true,
+    
   });
+
+  schema.index({ 'profile.firstName': 'text', 'profile.lastName': 'text', 'profile.username': 'text' }, { name: 'user text index' })
 
   // This is necessary to avoid model compilation errors in watch mode
   // see https://mongoosejs.com/docs/api/connection.html#connection_Connection-deleteModel
